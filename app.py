@@ -41,9 +41,30 @@ section[data-testid="stSidebar"] [data-testid="stMetricValue"] {
     color: #60a5fa !important; font-size: 1.5rem !important; font-weight: 800 !important;
 }
 
-/* Sembunyikan tombol collapse sidebar */
-button[data-testid="collapsedControl"] { display: none !important; }
-[data-testid="collapsedControl"]       { display: none !important; }
+/* Sembunyikan SEMUA tombol collapse/expand sidebar < > */
+button[data-testid="collapsedControl"],
+[data-testid="collapsedControl"],
+[data-testid="baseButton-headerNoPadding"],
+button[kind="header"],
+.st-emotion-cache-1dp5vir,
+.st-emotion-cache-pkbazv,
+section[data-testid="stSidebar"] button[data-testid="baseButton-header"],
+/* Tombol panah di pinggir sidebar */
+div[data-testid="collapsedControl"],
+div[class*="collapsedControl"],
+button[class*="collapsedControl"],
+/* Override semua kemungkinan class tombol collapse */
+[data-testid="stSidebarCollapsedControl"],
+.css-1dp5vir, .css-pkbazv,
+[aria-label="Close sidebar"],
+[aria-label="Open sidebar"] {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
 
 /* Main content */
 .main .block-container {
